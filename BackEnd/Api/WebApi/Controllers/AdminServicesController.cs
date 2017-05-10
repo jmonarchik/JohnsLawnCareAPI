@@ -30,7 +30,7 @@ namespace Api.WebApi.Controllers
         [Route("locations")]
        public IEnumerable<DTO.Location> GetLocations()
        {
-          return _adminServices.GetLocations();
+            return _adminServices.GetLocations();
        }
 
        //Get Location

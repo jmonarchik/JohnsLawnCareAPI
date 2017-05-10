@@ -9,6 +9,7 @@ import { LocationsComponent } from './locations/locations.component';
 import { CreateOrderComponent } from './create-order/create-order.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { LocationsListComponent } from './locations/locations-list/locations-list.component';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { LocationsListComponent } from './locations/locations-list/locations-lis
     LocationsComponent,
     CreateOrderComponent,
     AdminLoginComponent,
-    LocationsListComponent
+    LocationsListComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
