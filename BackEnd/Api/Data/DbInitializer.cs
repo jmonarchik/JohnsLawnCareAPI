@@ -4,7 +4,7 @@ namespace Api.Data
 {
     public class DbInitializer
     {
-        public static void Initialize(DbContext context)
+        public static void Initialize(WebApiDbContext context)
         {
             context.Database.Migrate();
             context.Database.EnsureCreated();

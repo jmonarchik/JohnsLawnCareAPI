@@ -16,7 +16,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Servic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{8DEAA602-4499-4530-AC1D-EC5CBB18062C}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{E2CB9BC3-3876-410A-856F-B8E24069E1A9}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataBase", "DataBase", "{DC0BE393-75CD-4EC6-A087-8D652404CCF1}"
+	ProjectSection(SolutionItems) = preProject
+		DataBase\marios_pizzerias.db = DataBase\marios_pizzerias.db
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

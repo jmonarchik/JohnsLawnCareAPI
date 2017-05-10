@@ -9,3 +9,10 @@ C:\Users\MrHydeOut\Documents\Visual Studio 2017\Projects\Api\Data\obj\Debug\netc
 C:\Users\MrHydeOut\Documents\Visual Studio 2017\Projects\Api\Data\obj\Debug\netcoreapp1.1\Data.AssemblyInfo.cs
 C:\Users\MrHydeOut\Documents\Visual Studio 2017\Projects\Api\Data\obj\Debug\netcoreapp1.1\Api.Data.dll
 C:\Users\MrHydeOut\Documents\Visual Studio 2017\Projects\Api\Data\obj\Debug\netcoreapp1.1\Api.Data.pdb
+C:\Users\MrHydeOut\Source\Repos\MariosPizzerias-SPA\BackEnd\Api\Data\bin\Debug\netcoreapp1.1\Api.Data.deps.json
+C:\Users\MrHydeOut\Source\Repos\MariosPizzerias-SPA\BackEnd\Api\Data\bin\Debug\netcoreapp1.1\Api.Data.dll
+C:\Users\MrHydeOut\Source\Repos\MariosPizzerias-SPA\BackEnd\Api\Data\bin\Debug\netcoreapp1.1\Api.Data.pdb
+C:\Users\MrHydeOut\Source\Repos\MariosPizzerias-SPA\BackEnd\Api\Data\obj\Debug\netcoreapp1.1\Data.csprojResolveAssemblyReference.cache
+C:\Users\MrHydeOut\Source\Repos\MariosPizzerias-SPA\BackEnd\Api\Data\obj\Debug\netcoreapp1.1\Data.AssemblyInfo.cs
+C:\Users\MrHydeOut\Source\Repos\MariosPizzerias-SPA\BackEnd\Api\Data\obj\Debug\netcoreapp1.1\Api.Data.dll
+C:\Users\MrHydeOut\Source\Repos\MariosPizzerias-SPA\BackEnd\Api\Data\obj\Debug\netcoreapp1.1\Api.Data.pdb
