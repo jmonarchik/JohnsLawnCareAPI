@@ -19,20 +19,5 @@ import { Component } from '@angular/core';
   `],
 })
 export class AppComponent {
-  title: string = 'app works!';
-  isLocationsTableVisible: boolean = false;
-  isMenuVisible: boolean = false;
-
-  private toggleVisibilityOfLocationsTable(): void
-  {
-     this.isLocationsTableVisible = !this.isLocationsTableVisible;
-     //(this.isLocationsTableVisible = true) ? "isMenuVisible = false":"";
-  }
-
-  private toggleVisibilityOfMenu(): void
-  {
-    this.isMenuVisible = !this.isMenuVisible;
-    //(this.isMenuVisible = true) ? "isLocationsTableVisible = false":"";
-  }
   
 }
