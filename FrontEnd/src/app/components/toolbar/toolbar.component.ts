@@ -3,9 +3,7 @@ import { Component } from '@angular/core';
 @Component({
     selector: 'app-toolbar',
 
-    template:`
-        <span>Toolbar Works!</span>
-    `,
+    templateUrl:'toolbar.component.html',
 
     styles:[`
     

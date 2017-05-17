@@ -5,6 +5,9 @@ import { Component } from '@angular/core';
   
   template:`
   <div>
+    <app-toolbar></app-toolbar>
+  </div>
+  <div>
     <router-outlet></router-outlet>
   </div>
   `,

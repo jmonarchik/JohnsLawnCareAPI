@@ -3,19 +3,8 @@ import { Component } from '@angular/core';
 @Component({
     selector:'app-dashboard',
 
-    template: `
-        <div class="centerButtons">
-            <button (click)="toggleVisibilityOfLocations()">Locations</button>
-            <button (click)="toggleVisibilityOfMenu()">Menu</button>
-            <button>Admin Portal</button>
-        <div *ngIf="isLocationsVisible">
-            <app-locations></app-locations>
-        </div>
-        <div *ngIf="isMenuVisible">
-             <app-menu></app-menu>
-        </div>
-        </div>
-    `,
+    templateUrl:'dashboard.component.html', 
+    
     styles:[`
 
     `]
