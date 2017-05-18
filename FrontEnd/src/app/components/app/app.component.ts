@@ -5,6 +5,9 @@ import { Component } from '@angular/core';
   
   template:`
   <div>
+    <app-toolbar></app-toolbar>
+  </div>
+  <div>
     <router-outlet></router-outlet>
   </div>
   `,
@@ -19,20 +22,5 @@ import { Component } from '@angular/core';
   `],
 })
 export class AppComponent {
-  title: string = 'app works!';
-  isLocationsTableVisible: boolean = false;
-  isMenuVisible: boolean = false;
-
-  private toggleVisibilityOfLocationsTable(): void
-  {
-     this.isLocationsTableVisible = !this.isLocationsTableVisible;
-     //(this.isLocationsTableVisible = true) ? "isMenuVisible = false":"";
-  }
-
-  private toggleVisibilityOfMenu(): void
-  {
-    this.isMenuVisible = !this.isMenuVisible;
-    //(this.isMenuVisible = true) ? "isLocationsTableVisible = false":"";
-  }
   
 }
