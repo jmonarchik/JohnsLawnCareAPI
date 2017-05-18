@@ -1,7 +1,9 @@
-    <div class="centerButtons">
-         <button (click)="toggleVisibilityOfLocations()">Locations</button>
+    <br>
+    <br>
+    <div id="dashboardButtons" class="centerButtons">
+         <button  class="btn btn-primary" (click)="toggleVisibilityOfLocations()">Locations</button>
          <span> or</span>
-         <button (click)="toggleVisibilityOfMenu()">Menu</button>
+         <button class="btn btn-warning" (click)="toggleVisibilityOfMenu()">Menu</button>
     <div *ngIf="isLocationsVisible">
        <app-locations></app-locations>
     </div>

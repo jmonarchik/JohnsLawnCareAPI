@@ -6,9 +6,7 @@ import { Component } from '@angular/core';
     templateUrl:'order-tracker.component.html',
         
 
-    styles:[`
-    
-    `],
+    styleUrls:['order-tracker.component.css'],
 })
 export class OrderTrackerComponent {
 

@@ -1,3 +1,22 @@
-<div>
-    <h6>Wright's Pizzeria</h6>
-</div>
+<div id ="locationInfo">
+        <a
+         href="#" 
+         class="list-group-item clearfix" 
+         *ngFor="let location of locations">
+            <div>
+                <h4 class="list-group-heading"><strong>{{ location.locationName }}</strong></h4>
+                <p class="list-group-item-text">{{location.locationStreet}}</p>
+                <p class="list-group-item-text">{{location.locationCity}},</p>
+                <p class="list-group-item-text">{{location.locationState}}</p>
+                <p class="list-group-item-text">{{location.locationZip}}</p>
+            </div>
+            <span>
+                <div>
+                    <img 
+                    [src]="location.locationImagePath" 
+                    alt="{{location.locationName}}" 
+                    class="img-responsive" style="max-height: 80px;">
+                </div>
+            </span>
+        </a>
+</div> 

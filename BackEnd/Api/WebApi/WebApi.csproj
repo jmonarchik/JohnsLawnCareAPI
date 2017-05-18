@@ -5,10 +5,6 @@
     <RootNamespace>Api.WebApi</RootNamespace>
     <AssemblyName>Api.WebApi</AssemblyName>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Content Include="wwwroot\Index.html" />
-  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.0.0" />
     <PackageReference Include="Microsoft.AspNetCore" Version="1.1.2" />
