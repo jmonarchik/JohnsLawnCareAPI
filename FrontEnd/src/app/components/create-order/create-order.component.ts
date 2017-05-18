@@ -3,9 +3,7 @@ import { Component } from '@angular/core';
 @Component({
     selector: 'app-create-order',
 
-    template:`
-        <span>Create Order Works!</span>
-    `,
+    templateUrl:'create-order.component.html',
 
     styles:[`
     
