@@ -5,9 +5,7 @@ import { Component } from '@angular/core';
 
     templateUrl:'create-order.component.html',
 
-    styles:[`
-    
-    `],
+    styleUrls:['create-order.component.css'],
 })
 export class CreateOrderComponent {
 
