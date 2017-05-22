@@ -5,7 +5,7 @@
     <h6><strong>Please enter either:</strong></h6>
     <br>
     <br>
-    Your order number
+    <h6>Your order number</h6>
     <input type="text" name="orderId">
     <br>
     <br>
@@ -13,18 +13,22 @@
     <br>
     <hr>
     <br>
-    Name on the order
+    <h6>Name on the order</h6>
     <input type="text" name="name">
     <br>
     <br>
-    <strong>and</strong>
+    <h5><strong>and</strong></h5>
     <br>
     <br>
-    Phone number on the order
+    <h6>Phone number on the order</h6>
     <input type="text" name="phone_number">
     <div>
         <br>
         <br>
-        <button class="btn btn-warning">Track Order</button>
+        <button class="btn btn-warning" (click)="trackOrder()">Track Order</button>
+    </div>
+    <div *ngIf="isTrackerVisible">
+        <app-orders></app-orders>
+        <h3>Order will appear here!</h3>
     </div>
 </form>

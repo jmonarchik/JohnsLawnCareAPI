@@ -1,0 +1,18 @@
+ <table class="table table-bordered">
+		<th>Order Number</th>
+		<th>Store Name</th>
+        <th>Name on Order</th>
+		<th>Order Status</th>
+		<th>Phone Number</th>
+	    <th>Time Ordered</th>
+        <th>Order Price</th>
+		<tr *ngFor="let order of orders">
+			<td>{{order.orderIdNumber}}</td>
+			<td>{{order.orderLocation}}</td>
+			<td>{{order.orderName}}</td>
+			<td>{{order.orderStatus}}</td>
+			<td>{{order.orderPhoneNumber}}</td>
+			<td>{{order.orderTime}}</td>
+			<td>{{order.orderPrice}}</td>
+		</tr>
+    </table>

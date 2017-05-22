@@ -2,18 +2,22 @@
 	<h1>Welcome to the Admin Portal</h1>
 	<br>
 	<br>
-	<button class="btn btn-success">Edit Orders</button> <button class="btn btn-primary">Edit Toppings</button> <button class="btn btn-warning">Edit Locations</button>
+	<button class="btn btn-success" (click)="editOrders()">Edit Orders</button> 
+	<button class="btn btn-primary" (click)="editToppings()">Edit Toppings</button> 
+	<button class="btn btn-warning" (click)="editLocations()">Edit Locations</button>
 	<br>
 	<br>
 </div>
-<div id="adminTable">
-    <table class="table table-bordered">
-		<th>Order Number</th>
-		<th>Store Name</th>
-        <th>Name on Order</th>
-		<th>Order Status</th>
-		<th>Phone Number</th>
-	    <th>Time Ordered</th>
-        <th>Order Price</th>
-    </table>
+<div id="adminTable" *ngIf="isOrdersVisible">
+   <app-orders></app-orders>
+</div>
+<div *ngIf="isToppingsVisible">
+	<button class="btn btn-warning">Update Topping Quantity</button>
+	<button class="btn btn-primary">Change Topping Name</button>
+	<button class="btn btn-danger">Remove Topping</button>
+	<button class="btn btn-success">Add Topping</button>
+	<app-toppings></app-toppings>
+</div>
+<div *ngIf="isLocationsVisible">
+	<app-locations></app-locations>
 </div>

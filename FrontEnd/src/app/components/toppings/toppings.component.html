@@ -1,0 +1,10 @@
+<table class="table table-bordered">
+		<th>Topping Name</th>
+        <th>Topping Quantity</th>
+        <th>Topping Price</th>
+        <tr *ngFor="let topping of toppings">
+            <td>{{topping.toppingName}}</td>
+            <td>{{topping.toppingQuantity}}</td>
+            <td>{{topping.toppingPrice}}</td>
+        </tr>
+    </table>
