@@ -8,6 +8,7 @@ import { OrderTrackerComponent } from './order-tracker/order-tracker.component';
 import { OrdersComponent } from './orders/orders.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { ToppingsComponent } from './toppings/toppings.component';
+import { LocationInfoComponent } from './locationInfo/locationInfo.component';
 
 export const APP_COMPONENTS = [
     AppComponent, 
@@ -20,4 +21,5 @@ export const APP_COMPONENTS = [
     OrdersComponent,
     ToolbarComponent,
     ToppingsComponent,
+    LocationInfoComponent,
 ];

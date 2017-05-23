@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { routes } from '../../routes/app.router';
 
 @Component({
   selector: 'app-admin-login',
@@ -6,11 +7,23 @@ import { Component, OnInit } from '@angular/core';
   templateUrl:'admin-login.component.html',
   styleUrls:['admin-login.component.css'],
 })
-export class AdminLoginComponent implements OnInit {
+export class AdminLoginComponent {
+isToppingsVisible: boolean = false;
+isLocationsVisible: boolean = false;
+isOrdersVisible: boolean = false;
 
-  constructor() { }
-
-  ngOnInit() {
+  private editToppings(): void
+  {
+    this.isToppingsVisible = !this.isToppingsVisible;
   }
 
+  private editLocations(): void
+  {
+    this.isLocationsVisible = !this.isLocationsVisible;
+  }
+
+  private editOrders(): void
+  {
+    this.isOrdersVisible = !this.isOrdersVisible;
+  }
 }
