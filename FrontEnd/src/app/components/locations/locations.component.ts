@@ -17,4 +17,23 @@ locations: Location[] = [
   new Location('Peachtree Pizzeria','4567 Peachtree Road','Atlanta','Georgia','30679',
   'http://roamilicious.com/wp-content/uploads/2016/03/Vero-pizza-oven-Brookhaven-700x400.jpg')
 ];
+
+isAddLocationVisible: boolean = false;
+isEditLocationVisible: boolean = false;
+isDeleteLocationVisible: boolean = false;
+
+private addLocation(): void
+{
+  this.isAddLocationVisible = !this.isAddLocationVisible;
+}
+
+private editLocation(): void
+{
+  this.isEditLocationVisible = !this.isEditLocationVisible;
+}
+
+private deleteLocation(): void
+{
+  this.isDeleteLocationVisible = !this.isDeleteLocationVisible;
+}
 }
