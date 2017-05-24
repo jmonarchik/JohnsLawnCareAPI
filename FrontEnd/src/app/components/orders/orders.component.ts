@@ -12,7 +12,7 @@ import { Order } from '../../models/order';
 })
 export class OrdersComponent {
 orders: Order[] =[
-    new Order("Wrights Pizzeria","4","pepperoni, peppers", "out for delivery","Havel","$16.99",
+    new Order("Wrights Pizzeria","4","pepperoni, peppers", "out for delivery","Havel-the-Rock","$16.99",
     "(404)452-6512","4:32 PM"),
 ]
 }

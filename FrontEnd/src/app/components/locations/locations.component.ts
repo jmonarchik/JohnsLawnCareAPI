@@ -1,39 +1,45 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Location } from '../../models/location';
+import { Store } from '@ngrx/store';
+import { LocationActions } from '../../actionHandlers/location.actions';
 
 @Component({
-    selector: 'app-locations',
-
-    templateUrl: 'locations.component.html',
-
-    styleUrls: ['locations.component.css'],
+  selector: 'app-locations',
+  templateUrl: 'locations.component.html',
+  styleUrls: ['locations.component.css'],
 })
-export class LocationsComponent {
-locations: Location[] = [
-  new Location('Wrights Pizzeria','294 Collier Road','Atlanta','Georgia','30984',
-  'https://ioneadwnews.files.wordpress.com/2014/07/buckhead-pizza.jpg?w=1024&h=682'),
-  new Location('Downtown Pizzeria','123 Stratford Road','Atlanta','Georgia','30671',
-  'https://cdn0.vox-cdn.com/uploads/chorus_image/image/38685210/tumblr_midt2a40Ya1s0uk7ao1_1280.0.jpg'),
-  new Location('Peachtree Pizzeria','4567 Peachtree Road','Atlanta','Georgia','30679',
-  'http://roamilicious.com/wp-content/uploads/2016/03/Vero-pizza-oven-Brookhaven-700x400.jpg')
-];
+export class LocationsComponent implements OnInit, OnDestroy {
+  locations: Array<Location>;
+  locationsSubscription: any;
+  isAddLocationVisible: boolean = false;
+  isEditLocationVisible: boolean = false;
+  isDeleteLocationVisible: boolean = false;
 
-isAddLocationVisible: boolean = false;
-isEditLocationVisible: boolean = false;
-isDeleteLocationVisible: boolean = false;
+  constructor(private _store: Store<any>, private _locationActions: LocationActions) { }
 
-private addLocation(): void
-{
-  this.isAddLocationVisible = !this.isAddLocationVisible;
-}
+  public ngOnInit() {
+    this.locationsSubscription = this._store.select('locations').subscribe((locations: Array<Location>) => {
+      this.locations = locations;
+    });
+  }
 
-private editLocation(): void
-{
-  this.isEditLocationVisible = !this.isEditLocationVisible;
-}
+  public ngOnDestroy() {
+    this.locationsSubscription.unsubscribe();
+  }
 
-private deleteLocation(): void
-{
-  this.isDeleteLocationVisible = !this.isDeleteLocationVisible;
-}
+  private addLocation(): void {
+    this.isAddLocationVisible = !this.isAddLocationVisible;
+  }
+
+  private editLocation(): void {
+    this.isEditLocationVisible = !this.isEditLocationVisible;
+  }
+
+  private deleteLocation(): void {
+    this.isDeleteLocationVisible = !this.isDeleteLocationVisible;
+  }
+
+  private getLocations(): void {
+    this._locationActions.getLocations();
+  }
 }

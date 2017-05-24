@@ -8,22 +8,28 @@ import { routes } from '../../routes/app.router';
   styleUrls:['admin-login.component.css'],
 })
 export class AdminLoginComponent {
-isToppingsVisible: boolean = false;
-isLocationsVisible: boolean = false;
-isOrdersVisible: boolean = false;
+  isToppingVisible: boolean = false;
+  isLocationVisible: boolean = false;
+  isOrderVisible: boolean = false;
+  isOrder2Visible: boolean = false;
 
   private editToppings(): void
   {
-    this.isToppingsVisible = !this.isToppingsVisible;
+    this.isToppingVisible = !this.isToppingVisible;
   }
 
   private editLocations(): void
   {
-    this.isLocationsVisible = !this.isLocationsVisible;
+    this.isLocationVisible = !this.isLocationVisible;
   }
 
   private editOrders(): void
   {
-    this.isOrdersVisible = !this.isOrdersVisible;
+    this.isOrderVisible = !this.isOrderVisible;
+  }
+
+  private editOrder2(): void
+  {
+    this.isOrder2Visible = !this.isOrder2Visible;
   }
 }

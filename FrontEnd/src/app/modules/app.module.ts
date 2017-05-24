@@ -5,8 +5,9 @@ import { HttpModule } from '@angular/http';
 import { routes } from '../routes/app.router';
 
 import { APP_COMPONENTS } from '../components/app.components';
+import {APP_STORES} from '../stores/app.stores';
+import {APP_ACTIONS} from '../actionHandlers/app.actionHandlers';
 import { AppComponent } from '../components/app/app.component';
-
 
 @NgModule({
   declarations: [
@@ -17,8 +18,11 @@ import { AppComponent } from '../components/app/app.component';
     FormsModule,
     HttpModule,
     routes,
+    ...APP_STORES,
   ],
-  providers: [],
+  providers: [
+    ...APP_ACTIONS,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
