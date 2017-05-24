@@ -21,29 +21,10 @@
     <input type="radio" name="order_size" value="extra">Extra-Large
     <br>
     <br>
-    <hr> Please choose your desired toppings below:<br>
-    <div>
-        <input type="checkbox" name="order_topping" value="mushrooms">Mushrooms
-        <input type="checkbox" name="order_topping" value="olives">Olives
-        <input type="checkbox" name="order_toppings" value="pepperoni">Pepporoni
-        <input type="checkbox" name="order_toppings" value="cheese">Extra Cheese
-        <input type="checkbox" name="order_toppings" value="ham">Ham
-        <input type="checkbox" name="order_toppings" value="bacon">Bacon
-        <input type="checkbox" name="order_toppings" value="pineapple">Pineapple
-        <input type="checkbox" name="order_toppings" value="peppers">Peppers
-        <input type="checkbox" name="order_toppings" value="anchovies">Anchovies
-        <input type="checkbox" name="order_toppings" value="basil">Basil
-        <br>
-        <input type="checkbox" name="order_toppings" value="beef">Ground Beef
-        <input type="checkbox" name="order_toppings" value="garlic">Garlic
-        <input type="checkbox" name="order_toppings" value="tomatoes">Tomatoes
-        <input type="checkbox" name="order_toppings" value="onions">Onions
-        <input type="checkbox" name="order_toppings" value="zucchini">Zucchini
-        <input type="checkbox" name="order_toppings" value="spinach">Spinach
-        <input type="checkbox" name="order_toppings" value="sausage">Sausage
-        <input type="checkbox" name="order_toppings" value="salami">Salami
-        <input type="checkbox" name="order_toppings" value="chicken">Chicken
-        <input type="checkbox" name="order_toppings" value="artichoke">Artichoke
+    <hr>
+    <br>
+    <div *ngFor="let topping of toppings">
+        <input type="checkbox" value="topping" name="order_topping" [checked]="selectedToppings.indexOf(topping.toppingId) !== -1" (change)="selectTopping(topping.toppingId)">{{topping.toppingName}}
     </div>
     <br>
     <br>
