@@ -1,10 +1,5 @@
-export class Pizza{
+export class Pizza {
+    public pizzaId: number;
+    public orderId: number;
     public pizzaSize: string;
-    public pizzaPrice: string;
-
-    constructor(pizzaSize: string, pizzaPrice: string)
-    {
-        this.pizzaSize = pizzaSize;
-        this.pizzaPrice = pizzaPrice;
-    }
 }

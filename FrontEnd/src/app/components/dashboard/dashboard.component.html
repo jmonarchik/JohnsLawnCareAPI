@@ -1,16 +1,13 @@
-    <br>
-    <br>
-    <div id="dashboardButtons" class="centerButtons">
-         <button  class="btn btn-primary" (click)="toggleVisibilityOfLocations()">Locations</button>
-         <span>or</span>
-         <button class="btn btn-warning" (click)="toggleVisibilityOfMenu()">Menu</button>
+<br>
+<br>
+<div id="dashboardButtons" class="centerButtons">
+    <button (click)="toggleVisibilityOfLocations()">Locations</button>
+    <span>or</span>
+    <button (click)="toggleVisibilityOfMenu()">Menu</button>
     <div *ngIf="isLocationsVisible">
-       <app-locationInfo></app-locationInfo>
+        <app-locationInfo></app-locationInfo>
     </div>
     <div *ngIf="isMenuVisible">
         <app-menu></app-menu>
     </div>
-    </div>
-
-
-    
+</div>

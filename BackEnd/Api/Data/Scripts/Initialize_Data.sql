@@ -20,102 +20,102 @@ INSERT INTO `Locations`(
 
 --DELETE FROM `Toppings`;
 INSERT INTO `Toppings`(
-	`ToppingId`,`ToppingName`,`ToppingQuantity`
+	`ToppingId`,`ToppingName`,`ToppingQuantity`,`ToppingPrice`
 ) VALUES (
-	1,'Mushrooms',100
+	1,'Mushrooms',100, .99
 );
 INSERT INTO `Toppings`(
-	`ToppingId`,`ToppingName`,`ToppingQuantity`
+	`ToppingId`,`ToppingName`,`ToppingQuantity`,`ToppingPrice`
 ) VALUES (
-	2,'Olives',100
+	2,'Olives',100, .99
 );
 INSERT INTO `Toppings`(
-	`ToppingId`,`ToppingName`,`ToppingQuantity`
+	`ToppingId`,`ToppingName`,`ToppingQuantity`,`ToppingPrice`
 ) VALUES (
-	3,'Pepperoni',100
+	3,'Pepperoni',100, .99
 );
 INSERT INTO `Toppings`(
-	`ToppingId`,`ToppingName`,`ToppingQuantity`
+	`ToppingId`,`ToppingName`,`ToppingQuantity`,`ToppingPrice`
 ) VALUES (
-	4,'Cheese',100
+	4,'Cheese',100, .99
 );
 INSERT INTO `Toppings`(
-	`ToppingId`,`ToppingName`,`ToppingQuantity`
+	`ToppingId`,`ToppingName`,`ToppingQuantity`,`ToppingPrice`
 ) VALUES (
-	5,'Ham',100
+	5,'Ham',100, .99
 );
 INSERT INTO `Toppings`(
-	`ToppingId`,`ToppingName`,`ToppingQuantity`
+	`ToppingId`,`ToppingName`,`ToppingQuantity`,`ToppingPrice`
 ) VALUES (
-	6,'Bacon',100
+	6,'Bacon',100, .99
 );
 INSERT INTO `Toppings`(
-	`ToppingId`,`ToppingName`,`ToppingQuantity`
+	`ToppingId`,`ToppingName`,`ToppingQuantity`,`ToppingPrice`
 ) VALUES (
-	7,'Pinapple',100
+	7,'Pinapple',100, .99
 );
 INSERT INTO `Toppings`(
-	`ToppingId`,`ToppingName`,`ToppingQuantity`
+	`ToppingId`,`ToppingName`,`ToppingQuantity`,`ToppingPrice`
 ) VALUES (
-	8,'Peppers',100
+	8,'Peppers',100, .99
 );
 INSERT INTO `Toppings`(
-	`ToppingId`,`ToppingName`,`ToppingQuantity`
+	`ToppingId`,`ToppingName`,`ToppingQuantity`,`ToppingPrice`
 ) VALUES (
-	9,'Anchovies',100
+	9,'Anchovies',100, .99
 );
 INSERT INTO `Toppings`(
-	`ToppingId`,`ToppingName`,`ToppingQuantity`
+	`ToppingId`,`ToppingName`,`ToppingQuantity`,`ToppingPrice`
 ) VALUES (
-	10,'Basil',100
+	10,'Basil',100, .99
 );
 INSERT INTO `Toppings`(
-	`ToppingId`,`ToppingName`,`ToppingQuantity`
+	`ToppingId`,`ToppingName`,`ToppingQuantity`,`ToppingPrice`
 ) VALUES (
-	11,'Ground Beef',100
+	11,'Ground Beef',100, .99
 );
 INSERT INTO `Toppings`(
-	`ToppingId`,`ToppingName`,`ToppingQuantity`
+	`ToppingId`,`ToppingName`,`ToppingQuantity`,`ToppingPrice`
 ) VALUES (
-	12,'Garlic',100
+	12,'Garlic',100, .99
 );
 INSERT INTO `Toppings`(
-	`ToppingId`,`ToppingName`,`ToppingQuantity`
+	`ToppingId`,`ToppingName`,`ToppingQuantity`,`ToppingPrice`
 ) VALUES (
-	13,'Tomatos',100
+	13,'Tomatos',100, .99
 );
 INSERT INTO `Toppings`(
-	`ToppingId`,`ToppingName`,`ToppingQuantity`
+	`ToppingId`,`ToppingName`,`ToppingQuantity`,`ToppingPrice`
 ) VALUES (
-	14,'Onions',100
+	14,'Onions',100, .99
 );
 INSERT INTO `Toppings`(
-	`ToppingId`,`ToppingName`,`ToppingQuantity`
+	`ToppingId`,`ToppingName`,`ToppingQuantity`,`ToppingPrice`
 ) VALUES (
-	15,'Zucchini',100
+	15,'Zucchini',100, .99
 );
 INSERT INTO `Toppings`(
-	`ToppingId`,`ToppingName`,`ToppingQuantity`
+	`ToppingId`,`ToppingName`,`ToppingQuantity`,`ToppingPrice`
 ) VALUES (
-	16,'Spinach',100
+	16,'Spinach',100, .99
 );
 INSERT INTO `Toppings`(
-	`ToppingId`,`ToppingName`,`ToppingQuantity`
+	`ToppingId`,`ToppingName`,`ToppingQuantity`,`ToppingPrice`
 ) VALUES (
-	17,'Sausage',100
+	17,'Sausage',100, .99
 );INSERT INTO `Toppings`(
-	`ToppingId`,`ToppingName`,`ToppingQuantity`
+	`ToppingId`,`ToppingName`,`ToppingQuantity`,`ToppingPrice`
 ) VALUES (
-	18,'Salami',100
+	18,'Salami',100, .99
 );INSERT INTO `Toppings`(
-	`ToppingId`,`ToppingName`,`ToppingQuantity`
+	`ToppingId`,`ToppingName`,`ToppingQuantity`,`ToppingPrice`
 ) VALUES (
-	19,'Chicken',100
+	19,'Chicken',100, .99
 );
 INSERT INTO `Toppings`(
-	`ToppingId`,`ToppingName`,`ToppingQuantity`
+	`ToppingId`,`ToppingName`,`ToppingQuantity`,`ToppingPrice`
 ) VALUES (
-	20,'Artichoke',100
+	20,'Artichoke',100, .99
 );
 
 

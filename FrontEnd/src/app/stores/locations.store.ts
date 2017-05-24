@@ -26,10 +26,10 @@ export const locations = (state: Array<Location> = locationsInitialState, action
 
         case DELETE_LOCATIONS:
             return [];
-        
+
         case INSERT_LOCATION:
             const locationToBeInserted: Location = action.payload;
-            const newState2: Array<Location> = [...state,locationToBeInserted];
+            const newState2: Array<Location> = [...state, locationToBeInserted];
             return newState2;
 
         default:

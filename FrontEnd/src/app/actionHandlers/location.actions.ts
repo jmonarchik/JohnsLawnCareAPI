@@ -1,11 +1,11 @@
-import { Store} from '@ngrx/store';
-import {Injectable} from '@angular/core';
-import {UPDATE_LOCATIONS} from '../stores/locations.store';
+import { Store } from '@ngrx/store';
+import { Injectable } from '@angular/core';
+import { UPDATE_LOCATIONS } from '../stores/locations.store';
 
 @Injectable()
 export class LocationActions {
 
-    constructor (private _store: Store<any>){}
+    constructor(private _store: Store<any>) { }
 
     public getLocations(): void {
         const locationsResponse = [
@@ -32,6 +32,6 @@ export class LocationActions {
             "type": UPDATE_LOCATIONS,
             "payload": locationsResponse,
         });
-        
+
     }
 }

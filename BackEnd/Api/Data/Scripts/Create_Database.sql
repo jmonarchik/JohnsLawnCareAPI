@@ -26,12 +26,15 @@ CREATE TABLE "Orders" (
 CREATE TABLE "Pizzas" ( 
 	"PizzaId" INTEGER NOT NULL CONSTRAINT "PK_Pizzas" PRIMARY KEY AUTOINCREMENT, 
 	"OrderId" INTEGER NOT NULL 
+	 
 );
 
 --drop table Toppings
 CREATE TABLE "Toppings" ( 
 	"ToppingId" INTEGER NOT NULL CONSTRAINT "PK_Toppings" PRIMARY KEY AUTOINCREMENT, 
-	"ToppingName" TEXT, "ToppingQuantity" INTEGER NOT NULL 
+	"ToppingName" TEXT NOT NULL, 
+	"ToppingQuantity" INTEGER NOT NULL,
+    "ToppingPrice" TEXT NOT NULL
 );
 
 --drop table PizzaTopping
