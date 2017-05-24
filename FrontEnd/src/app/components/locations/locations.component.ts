@@ -14,6 +14,7 @@ export class LocationsComponent implements OnInit, OnDestroy {
   isAddLocationVisible: boolean = false;
   isEditLocationVisible: boolean = false;
   isDeleteLocationVisible: boolean = false;
+  isGetLocationsVisible: boolean = false;
 
   constructor(private _store: Store<any>, private _locationActions: LocationActions) { }
 
@@ -40,6 +41,7 @@ export class LocationsComponent implements OnInit, OnDestroy {
   }
 
   private getLocations(): void {
+    this.isGetLocationsVisible = !this.isGetLocationsVisible;
     this._locationActions.getLocations();
   }
 }

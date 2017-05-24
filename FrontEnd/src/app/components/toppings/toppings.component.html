@@ -1,56 +1,57 @@
- <button class="btn btn-warning" (click)="updateTopping()">Update Topping Quantity</button>
-	<button class="btn btn-primary" (click)="changeToppingName()">Change Topping Name</button>
-	<button class="btn btn-danger" (click)="deleteTopping()">Delete Topping</button>
-	<button class="btn btn-success" (click)="addTopping()">Add Topping</button>
-    <br>
-	<hr>
- <div *ngIf="isUpdateToppingVisible">
-     <h6>Enter Topping Id Number, Topping Name, AND New Quantity:</h6>
-     <strong>Topping Id:</strong>
+<button (click)="updateTopping()">Update Topping Quantity</button>
+<button (click)="changeToppingName()">Change Topping Name</button>
+<button (click)="deleteTopping()">Delete Topping</button>
+<button (click)="addTopping()">Add Topping</button>
+<button (click)="getToppings()">Get Toppings</button>
+<br>
+<hr>
+<div *ngIf="isUpdateToppingVisible">
+    <h6>Enter Topping Id Number, Topping Name, AND New Quantity:</h6>
+    <strong>Topping Id:</strong>
     <input type="text" name="topping_id">
     <strong>Topping Name:</strong>
     <input type="text" name="topping_name">
     <strong>New Topping Quantity:</strong>
     <input type="text" name="topping_quantity">
-    <button class="btn btn-warning">UPDATE</button>
- </div>
- <div *ngIf="isChangeToppingNameVisible">
-     <h6>Enter Topping Id Number AND New Name:</h6>
-     <strong>Topping Id:</strong>
-     <input type="text" name="topping_id">
-     <strong>Topping New Name:</strong>
-     <input type="text" name="topping_name_new">
-    <button class="btn btn-primary">CHANGE</button>
- </div>
- <div *ngIf="isDeleteToppingVisible">
-     <h6>Enter Topping Id Number AND Topping Name you wish to delete:</h6>
-     <strong>Topping Id:</strong>
-     <input type="text" name="topping_id">
-     <strong>Topping Name:</strong>
-     <input type="text" name="topping_name">
-     <button class="btn btn-danger">DELETE</button>
- </div>
- <div *ngIf="isAddToppingVisible">
-     <h6>Enter New Topping Name, Topping Quantity, AND Topping Price:</h6>
-     <strong>Topping Name:</strong>
-     <input type="text" name="topping_name">
-     <strong>Topping Quantity:</strong>
-     <input type="text" name="topping_quantity">
-     <strong>Topping Price:</strong>
-     <input type="text" name="topping_price">
-     <button class="btn btn-success">ADD</button>
- </div>
+    <button>UPDATE</button>
+</div>
+<div *ngIf="isChangeToppingNameVisible">
+    <h6>Enter Topping Id Number AND New Name:</h6>
+    <strong>Topping Id:</strong>
+    <input type="text" name="topping_id">
+    <strong>Topping New Name:</strong>
+    <input type="text" name="topping_name_new">
+    <button>CHANGE</button>
+</div>
+<div *ngIf="isDeleteToppingVisible">
+    <h6>Enter Topping Id Number AND Topping Name you wish to delete:</h6>
+    <strong>Topping Id:</strong>
+    <input type="text" name="topping_id">
+    <strong>Topping Name:</strong>
+    <input type="text" name="topping_name">
+    <button>DELETE</button>
+</div>
+<div *ngIf="isAddToppingVisible">
+    <h6>Enter New Topping Name, Topping Quantity, AND Topping Price:</h6>
+    <strong>Topping Name:</strong>
+    <input type="text" name="topping_name">
+    <strong>Topping Quantity:</strong>
+    <input type="text" name="topping_quantity">
+    <strong>Topping Price:</strong>
+    <input type="text" name="topping_price">
+    <button>ADD</button>
+</div>
 <br>
 <hr>
-<table class="table table-bordered">
-        <th>Topping Id Number</th>
-		<th>Topping Name</th>
-        <th>Topping Quantity</th>
-        <th>Topping Price</th>
-        <tr *ngFor="let topping of toppings">
-            <td>{{topping.toppingIdNumber}}</td>
-            <td>{{topping.toppingName}}</td>
-            <td>{{topping.toppingQuantity}}</td>
-            <td>{{topping.toppingPrice}}</td>
-        </tr>
-    </table>
+<table *ngIf="isGetToppingsVisible" class="table table-bordered">
+    <th>Topping Id</th>
+    <th>Topping Name</th>
+    <th>Topping Quantity</th>
+    <th>Topping Price</th>
+    <tr *ngFor="let topping of toppings">
+        <td>{{topping.toppingId}}</td>
+        <td>{{topping.toppingName}}</td>
+        <td>{{topping.toppingQuantity}}</td>
+        <td>{{topping.toppingPrice}}</td>
+    </tr>
+</table>

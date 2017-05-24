@@ -2,35 +2,31 @@
 	<h1>Welcome to the Admin Portal</h1>
 	<br>
 	<br>
-	<button class="btn btn-success" (click)="editOrders()">Edit Orders</button> 
-	<button class="btn btn-primary" (click)="editToppings()">Edit Toppings</button> 
-	<button class="btn btn-warning" (click)="editLocations()">Edit Locations</button>
+	<button (click)="editOrders()">Edit Orders</button>
+	<button (click)="editToppings()">Edit Toppings</button>
+	<button (click)="editLocations()">Edit Locations</button>
 	<br>
 	<br>
 </div>
 <div id="adminTable" *ngIf="isOrderVisible">
-	<h5>Enter order number and choose attribute you wish to edit: </h5>
+	<h5>Enter order number and choose attribute you wish to edit:</h5>
 	<strong>Order Id Number:</strong>
 	<input type="text" name="order_id">
-	<div classs="btn-group">
-	<button 
-	 type="button"
-	 class="btn btn-primary dropdown-toggle">
-	 Order Attribute<span class="caret"></span>
-	</button>
-	<ul class="dropdown-menu">
-		<li><a href="#">Order Location</a></li>
-		<li><a href="#">Order Name</a></li>
-		<li><a href="#">Order Status</a></li>
-		<li><a href="#">Phone Number</a></li>
-		<li><a href="#">Order Price</a></li>
-	</ul>
+	<div>
+		<button> Order Attribute</button>
+		<!--<ul class="dropdown-menu">
+			<li><a href="#">Order Location</a></li>
+			<li><a href="#">Order Name</a></li>
+			<li><a href="#">Order Status</a></li>
+			<li><a href="#">Phone Number</a></li>
+			<li><a href="#">Order Price</a></li>
+		</ul>-->
 	</div>
-	<button class="btn btn-primary" (click)="editOrder2()">Submit</button>
+	<button (click)="editOrder2()">Submit</button>
 	<div *ngIf="isOrder2Visible">
 		<strong>Enter the order information with wish to edit:</strong>
 	</div>
-   <app-orders></app-orders>
+	<app-orders></app-orders>
 </div>
 <div *ngIf="isToppingVisible">
 	<app-toppings></app-toppings>

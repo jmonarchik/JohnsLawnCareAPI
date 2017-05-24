@@ -1,7 +1,7 @@
-<button class="btn btn-success" (click)="addLocation()">Add a location</button>
-<button class="btn btn-primary" (click)="editLocation()">Edit existing location</button>
-<button class="btn btn-danger" (click)="deleteLocation()">Delete a location</button>
-<button class="btn btn-danger" (click)="getLocations()">Get locations</button>
+<button (click)="addLocation()">Add a location</button>
+<button (click)="editLocation()">Edit existing location</button>
+<button (click)="deleteLocation()">Delete a location</button>
+<button (click)="getLocations()">Get locations</button>
 <br>
 <hr>
 <div *ngIf="isAddLocationVisible">
@@ -17,7 +17,7 @@
     <input type="text" name="location_state">
     <strong>Location Zip:</strong>
     <input type="text" name="location_zip">
-    <button class="btn btn-success">ADD</button>
+    <button>ADD</button>
 </div>
 <div *ngIf="isEditLocationVisible">
     <h6>Enter Location Id and Location Name to you wish to edit:</h6>
@@ -25,7 +25,7 @@
     <input type="text" name="location_id">
     <strong>Location Name:</strong>
     <input type="text" name="location_name">
-    <button class="btn btn-primary">EDIT</button>
+    <button>EDIT</button>
 </div>
 <div *ngIf="isDeleteLocationVisible">
     <h6>Please Enter Location Id AND Location Name you wish to delete:</h6>
@@ -33,19 +33,17 @@
     <input type="text" name="location_id">
     <strong>Location Name:</strong>
     <input type="text" name="location_name">
-    <button class="btn btn-danger">DELETE</button>
+    <button>DELETE</button>
 </div>
-<table class="table table-bordered">
-		<th>Location Name</th>
-        <th>Location Street</th>
-        <th>Location City</th>
-        <th>Location State</th>
-        <th>Location Zip</th>
-        <tr *ngFor="let location of locations">
-            <td>{{location.locationName}}</td>
-            <td>{{location.locationStreet}}</td>
-            <td>{{location.locationCity}}</td>
-            <td>{{location.locationState}}</td>
-            <td>{{location.locationZip}}</td>
-        </tr>
-    </table>
+<table *ngIf="isGetLocationsVisible" class="table table-bordered">
+    <th>Location Id</th>
+    <th>Location Name</th>
+    <th>Location Address</th>
+    <th>Location Phone Number</th>
+    <tr *ngFor="let location of locations">
+        <td>{{location.locationId}}</td>
+        <td>{{location.locationName}}</td>
+        <td>{{location.locationAddress}}</td>
+        <td>{{location.locationPhoneNumber}}</td>
+    </tr>
+</table>
