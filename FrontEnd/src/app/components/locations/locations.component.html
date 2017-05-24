@@ -1,37 +1,38 @@
 <button class="btn btn-success" (click)="addLocation()">Add a location</button>
 <button class="btn btn-primary" (click)="editLocation()">Edit existing location</button>
 <button class="btn btn-danger" (click)="deleteLocation()">Delete a location</button>
+<button class="btn btn-danger" (click)="getLocations()">Get locations</button>
 <br>
 <hr>
 <div *ngIf="isAddLocationVisible">
     <h6>Enter Location Name, Location Street Address, Location City, Location State, and Location Zip:</h6>
     <br>
     <strong>Location Name:</strong>
-    <input type="text" name="text">
+    <input type="text" name="location_name">
     <strong>Location Street Address:</strong>
-    <input type="text" name="text">
+    <input type="text" name="location_street">
     <strong>Location City:</strong>
-    <input type="text" name="text">
+    <input type="text" name="location_city">
     <strong>Location State:</strong>
-    <input type="text" name="text">
+    <input type="text" name="location_state">
     <strong>Location Zip:</strong>
-    <input type="text" name="text">
+    <input type="text" name="location_zip">
     <button class="btn btn-success">ADD</button>
 </div>
 <div *ngIf="isEditLocationVisible">
     <h6>Enter Location Id and Location Name to you wish to edit:</h6>
     <strong>Location Id Number:</strong>
-    <input type="text" name="text">
+    <input type="text" name="location_id">
     <strong>Location Name:</strong>
-    <input type="text" name="text">
+    <input type="text" name="location_name">
     <button class="btn btn-primary">EDIT</button>
 </div>
 <div *ngIf="isDeleteLocationVisible">
     <h6>Please Enter Location Id AND Location Name you wish to delete:</h6>
     <strong>Location Id Number:</strong>
-    <input type="text" name="name">
+    <input type="text" name="location_id">
     <strong>Location Name:</strong>
-    <input type="text" name="name">
+    <input type="text" name="location_name">
     <button class="btn btn-danger">DELETE</button>
 </div>
 <table class="table table-bordered">
