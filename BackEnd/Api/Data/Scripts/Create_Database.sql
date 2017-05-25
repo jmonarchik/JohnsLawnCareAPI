@@ -45,3 +45,12 @@ CREATE TABLE "PizzaTopping" (
 	CONSTRAINT "FK_PizzaTopping_Pizzas_PizzaId" FOREIGN KEY ("PizzaId") REFERENCES "Pizzas" ("PizzaId") ON DELETE CASCADE, 
 	CONSTRAINT "FK_PizzaTopping_Toppings_ToppingId" FOREIGN KEY ("ToppingId") REFERENCES "Toppings" ("ToppingId") ON DELETE CASCADE 
 );
+
+CREATE TABLE "PizzaSize" (
+	"SizeSmall" TEXT NOT NULL,
+	"SizeMedium" TEXT NOT NULL,
+	"SizeLarge" TEXT NOT NULL,
+	"PizzaId" INTEGER NOT NULL,
+	CONSTRAINT "PK_PizzaSize" PRIMARY KEY ("Size", "PizzaId"),
+	CONSTRAINT "FK_PizzaSize_Pizzas_PizzaId" FOREIGN KEY ("PizzaId") REFERENCES "Pizzas" ("PizzaId") ON DELETE CASCADE 
+);

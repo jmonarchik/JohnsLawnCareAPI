@@ -3,6 +3,7 @@ import { Topping } from '../../models/topping';
 import { Store } from '@ngrx/store';
 import { ToppingActions } from '../../actionHandlers/topping.actions';
 
+
 @Component({
     selector: 'app-create-order',
     templateUrl: 'create-order.component.html',
@@ -14,6 +15,7 @@ export class CreateOrderComponent {
     isToppingsTableVisible: boolean = false;
     selectedToppings: Array<number> = [];
 
+
     constructor(private _store: Store<any>, private _toppingActions: ToppingActions) { }
 
     public ngOnInit() {
@@ -23,6 +25,7 @@ export class CreateOrderComponent {
 
         this._toppingActions.getToppings();
     }
+
     public ngDoCheck() {
         console.log(this.selectedToppings);
     }
@@ -32,10 +35,10 @@ export class CreateOrderComponent {
     public selectTopping(toppingId: number): void {
         //debugger;
         const index = this.selectedToppings.indexOf(toppingId);
-        if(index !== -1){
+        if (index !== -1) {
             this.selectedToppings.splice(index, 1);
         }
-        else{
+        else {
             this.selectedToppings.push(toppingId);
         }
         console.log(this.selectedToppings);

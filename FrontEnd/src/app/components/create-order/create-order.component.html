@@ -15,16 +15,14 @@
     <br>
     <hr> Please choose your desired pizza size below:
     <br>
-    <input type="radio" name="order_size" value="small">Small
-    <input type="radio" name="order_size" value="medium">Medium
-    <input type="radio" name="order_size" value="large">Large
-    <input type="radio" name="order_size" value="extra">Extra-Large
+    <app-pizzaSizes></app-pizzaSizes>
     <br>
     <br>
     <hr>
     <br>
     <div *ngFor="let topping of toppings">
-        <input type="checkbox" value="topping" name="order_topping" [checked]="selectedToppings.indexOf(topping.toppingId) !== -1" (change)="selectTopping(topping.toppingId)">{{topping.toppingName}}
+        <input type="checkbox" value="topping" name="order_topping" [checked]="selectedToppings.indexOf(topping.toppingId) !== -1"
+            (click)="selectTopping(topping.toppingId)">{{topping.toppingName}}
     </div>
     <br>
     <br>

@@ -9,6 +9,7 @@ import { OrdersComponent } from './orders/orders.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { ToppingsComponent } from './toppings/toppings.component';
 import { LocationInfoComponent } from './locationInfo/locationInfo.component';
+import { PizzaSizesComponent } from './pizzaSizes/pizzaSizes.component';
 
 export const APP_COMPONENTS = [
     AppComponent, 
@@ -22,4 +23,5 @@ export const APP_COMPONENTS = [
     ToolbarComponent,
     ToppingsComponent,
     LocationInfoComponent,
+    PizzaSizesComponent,
 ];
