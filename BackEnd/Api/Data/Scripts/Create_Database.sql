@@ -25,7 +25,8 @@ CREATE TABLE "Orders" (
 --drop table Pizzas
 CREATE TABLE "Pizzas" ( 
 	"PizzaId" INTEGER NOT NULL CONSTRAINT "PK_Pizzas" PRIMARY KEY AUTOINCREMENT, 
-	"OrderId" INTEGER NOT NULL 
+	"OrderId" INTEGER NOT NULL,
+	"PizzaSize" TEXT NOT NULL
 	 
 );
 
