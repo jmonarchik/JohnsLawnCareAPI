@@ -23,6 +23,7 @@ export class ToppingsComponent implements OnInit, OnDestroy {
         this.toppingsSubscription = this._store.select('toppings').subscribe((toppings: Array<Topping>) => {
             this.toppings = toppings;
         });
+        this._toppingActions.getToppings();
     }
 
     public ngOnDestroy() {

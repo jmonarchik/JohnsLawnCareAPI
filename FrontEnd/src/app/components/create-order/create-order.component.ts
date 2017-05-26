@@ -15,7 +15,6 @@ export class CreateOrderComponent {
     isToppingsTableVisible: boolean = false;
     selectedToppings: Array<number> = [];
 
-
     constructor(private _store: Store<any>, private _toppingActions: ToppingActions) { }
 
     public ngOnInit() {
