@@ -15,7 +15,10 @@
     <br>
     <hr> Please choose your desired pizza size below:
     <br>
-    <app-pizzaSizes></app-pizzaSizes>
+    <div *ngFor="let pizzaSize of pizzaSizes">
+        <input type="radio" value="pizza_size" name="order_pizza_size" [checked]="selectedPizzaSizes.indexOf(pizzaSize.pizzaSizeId) !== -1"
+            (click)="selectPizzaSize(pizzaSize.pizzaSizeId)">{{pizzaSize?.pizzaSizeName}}
+    </div>
     <br>
     <br>
     <hr>

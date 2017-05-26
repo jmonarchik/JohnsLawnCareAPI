@@ -1,4 +1,0 @@
-<div *ngFor="let pizzaSize of pizzaSizes">
-    <input type="radio" value="pizza_size" name="order_pizza_size" [checked]="selectedPizzaSizes.indexOf(pizzaSize.pizzaSizeId) !== -1"
-        (click)="selectPizzaSize(pizzaSize.pizzaSizeId)">{{pizzaSize.pizzaSizeName}}
-</div>

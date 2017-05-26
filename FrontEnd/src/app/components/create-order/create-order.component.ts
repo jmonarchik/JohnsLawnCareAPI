@@ -2,6 +2,8 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Topping } from '../../models/topping';
 import { Store } from '@ngrx/store';
 import { ToppingActions } from '../../actionHandlers/topping.actions';
+import { PizzaSize } from '../../models/pizzaSize';
+import { PizzaSizeActions } from '../../actionHandlers/pizzaSize.actions';
 
 
 @Component({
@@ -14,16 +16,26 @@ export class CreateOrderComponent {
     toppingsSubscription: any;
     isToppingsTableVisible: boolean = false;
     selectedToppings: Array<number> = [];
+    pizzaSizes: Array<PizzaSize>;
+    pizzaSizesSubscription: any;
+    isPizzaSizesVisible: boolean = false;
+    selectedPizzaSizes: Array<number> = [];
 
-    constructor(private _store: Store<any>, private _toppingActions: ToppingActions) { }
+    constructor(private _store: Store<any>, private _toppingActions: ToppingActions,
+        private _pizzaSizeActions: PizzaSizeActions) { }
 
     public ngOnInit() {
         this.toppingsSubscription = this._store.select('toppings').subscribe((toppings: Array<Topping>) => {
             this.toppings = toppings;
         });
-
         this._toppingActions.getToppings();
+
+        this.pizzaSizesSubscription = this._store.select('pizzaSize').subscribe((pizzaSizes: Array<PizzaSize>) => {
+            this.pizzaSizes = pizzaSizes;
+        });
+        this._pizzaSizeActions.getPizzaSizes();
     }
+
 
     public ngDoCheck() {
         console.log(this.selectedToppings);
@@ -32,7 +44,6 @@ export class CreateOrderComponent {
         this.toppingsSubscription.unsubscribe();
     }
     public selectTopping(toppingId: number): void {
-        //debugger;
         const index = this.selectedToppings.indexOf(toppingId);
         if (index !== -1) {
             this.selectedToppings.splice(index, 1);
