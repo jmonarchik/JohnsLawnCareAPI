@@ -14,77 +14,64 @@ namespace Api.Services
             _repository = repository;
         }
 
-        public List<DTO.Location> GetLocations() 
+        public List<DTO.Estimate> GetEstimate()
         {
-            List<DTO.Location> locationDTOs = new List<DTO.Location>();
+            List<DTO.Estimate> estimateDTOs = new List<DTO.Estimate>();
 
-            var locationDAOs = _repository.GetLocations();
+            var estimateDAOs = _repository.GetEstimate();
 
-            foreach (var location in locationDAOs)
+            foreach (var estimate in estimateDAOs)
             {
-                var dto = DTO.Location.fromDAO(location);
-                locationDTOs.Add(dto);
+                var dto = DTO.Estimate.fromDAO(estimate);
+                estimateDTOs.Add(dto);
             }
 
-            return locationDTOs;
+            return estimateDTOs;
         }
 
-        public DTO.Location GetLocation(int locationId) 
+        public DTO.Estimate GetEstimate(int estimateId)
         {
-            var location = _repository.GetLocation(locationId); 
+            var estimate = _repository.GetEstimate(estimateId);
 
-            var dto = DTO.Location.fromDAO(location); 
+            var dto = DTO.Estimate.fromDAO(estimate);
 
             return dto;
         }
 
-        public IEnumerable<DTO.Order> GetOrders()  
+
+        public DTO.Estimate CreateEstimate(DTO.Estimate newEstimate)
         {
-            List<DTO.Order> orderDTOs = new List<DTO.Order>(); 
+            var dao = DTO.Estimate.toDAO(newEstimate);
 
-            var orderDAOs = _repository.GetOrders(); 
-            foreach (var order in orderDAOs) 
-            {
-                var dto = DTO.Order.fromDAO(order);
-                orderDTOs.Add(dto);
-            }
+            var estimate = _repository.CreateEstimate(dao);
+            var dao2 = _repository.GetEstimate(estimate.ID);
 
-            return orderDTOs;
-        }
-
-        public DTO.Order CreateOrder(DTO.Order newOrder) 
-        {
-            var dao = DTO.Order.toDAO(newOrder); 
-
-            var order = _repository.CreateOrder(dao); 
-            var dao2 = _repository.GetOrder(order.OrderId); 
-
-            var dto = DTO.Order.fromDAO(dao2); 
+            var dto = DTO.Estimate.fromDAO(dao2);
 
             return dto;
         }
 
-        public DTO.Order GetOrder(int orderId) 
-        {
-            var order = _repository.GetOrder(orderId); 
-            var dto = DTO.Order.fromDAO(order); 
+        // public DTO.Order GetOrder(int orderId)
+        // {
+        //     var order = _repository.GetOrder(orderId);
+        //     var dto = DTO.Order.fromDAO(order);
 
-            return dto;
-        }
+        //     return dto;
+        // }
 
-        public List<DTO.Topping> GetToppings() 
-        {
-            List<DTO.Topping> toppingDTOs = new List<DTO.Topping>();
+        // public List<DTO.Topping> GetToppings()
+        // {
+        //     List<DTO.Topping> toppingDTOs = new List<DTO.Topping>();
 
-            var toppingDAOs = _repository.GetToppings();
+        //     var toppingDAOs = _repository.GetToppings();
 
-            foreach (var topping in toppingDAOs)
-            {
-                var dto = DTO.Topping.fromDAO(topping);
-                toppingDTOs.Add(dto);
-            }
+        //     foreach (var topping in toppingDAOs)
+        //     {
+        //         var dto = DTO.Topping.fromDAO(topping);
+        //         toppingDTOs.Add(dto);
+        //     }
 
-            return toppingDTOs;
-        }
+        //     return toppingDTOs;
+        // }
     }
 }

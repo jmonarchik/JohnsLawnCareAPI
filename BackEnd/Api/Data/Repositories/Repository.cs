@@ -13,80 +13,69 @@ namespace Api.Data.Repositories
             _context = context;
         }
 
-        public Location CreateLocation(Location newLocation) 
+        public Estimate CreateEstimate(Estimate newEstimate)
         {
-            var location = _context.Locations.Add(newLocation); 
+            var estimate = _context.Estimates.Add(newEstimate);
 
             _context.SaveChanges();
 
-            return newLocation;
+            return newEstimate;
         }
-        public Location UpdateLocation(Location updatedLocation)
+        public Estimate GetEstimate(int estimateId)
         {
-            var location = _context.Locations.Update(updatedLocation);
-
-            _context.SaveChanges();
-
-            var location2 = GetLocation(location.Entity.LocationId.Value);
-
-            return location2;
+            return _context.Estimates.FirstOrDefault(l => l.ID == estimateId);
         }
 
-        public Location GetLocation(int locationId) 
+        public List<Estimate> GetEstimate()
         {
-            return _context.Locations.FirstOrDefault(l => l.LocationId == locationId); 
+            return _context.Estimates.ToList();
         }
 
-        public List<Location> GetLocations() 
-        {
-            return _context.Locations.ToList(); 
-        }
+        // public Order CreateOrder(Order newOrder) 
+        // {
+        //     var order = _context.Orders.Add(newOrder); 
 
-        public Order CreateOrder(Order newOrder) 
-        {
-            var order = _context.Orders.Add(newOrder); 
+        //     _context.SaveChanges();
 
-            _context.SaveChanges();
+        //     var order2 = GetOrder(order.Entity.OrderId);
 
-            var order2 = GetOrder(order.Entity.OrderId);
+        //     return order2; 
+        // }
 
-            return order2; 
-        }
+        // public Order GetOrder(int orderId) 
+        // {
+        //     return _context.Orders.FirstOrDefault(o => o.OrderId == orderId); 
+        // }
 
-        public Order GetOrder(int orderId) 
-        {
-            return _context.Orders.FirstOrDefault(o => o.OrderId == orderId); 
-        }
+        // public IEnumerable<Order> GetOrders() 
+        // {
+        //     return _context.Orders.ToList(); 
+        // }
 
-        public IEnumerable<Order> GetOrders() 
-        {
-            return _context.Orders.ToList(); 
-        }
+        // public List<Topping> GetToppings() 
+        // {
+        //     return _context.Toppings.ToList(); 
+        // }
 
-        public List<Topping> GetToppings() 
-        {
-            return _context.Toppings.ToList(); 
-        }
+        // public Topping GetTopping(int toppingId)
+        // {
+        //     return _context.Toppings.FirstOrDefault(t => t.ToppingId == toppingId);
+        // }
 
-        public Topping GetTopping(int toppingId)
-        {
-            return _context.Toppings.FirstOrDefault(t => t.ToppingId == toppingId);
-        }
+        // public Topping CheckToppingInventory(int toppingId) 
+        // {
+        //     var topping = _context.Toppings.FirstOrDefault(t => t.ToppingId == toppingId); 
+        //     return topping;
+        // }
 
-        public Topping CheckToppingInventory(int toppingId) 
-        {
-            var topping = _context.Toppings.FirstOrDefault(t => t.ToppingId == toppingId); 
-            return topping;
-        }
+        // public Topping UpdateTopping(Topping updatedTopping) 
+        // {
+        //     var topping = _context.Toppings.Update(updatedTopping);
+        //     _context.SaveChanges();
 
-        public Topping UpdateTopping(Topping updatedTopping) 
-        {
-            var topping = _context.Toppings.Update(updatedTopping);
-            _context.SaveChanges();
+        //     var topping2 = GetTopping(topping.Entity.ToppingId);
 
-            var topping2 = GetTopping(topping.Entity.ToppingId);
-
-            return topping2;
-        }
+        //     return topping2;
+        // }
     }
 }
