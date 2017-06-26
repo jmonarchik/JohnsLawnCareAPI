@@ -21,7 +21,7 @@ namespace Api.WebApi.Controllers
         [Route("test")]
         public string GetTest()
         {
-            return "Look Ma, my first pizza service!";
+            return "Johns Lawn Care API!";
         }
 
         //GetEstimates
