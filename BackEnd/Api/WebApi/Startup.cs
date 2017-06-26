@@ -33,7 +33,6 @@ namespace Api.WebApi
             services.AddMvc();
             services.AddDbContext<WebApiDbContext>();
             services.AddScoped<ICustomerServices, CustomerServices>();
-            services.AddScoped<IAdminServices,AdminServices>();
             services.AddScoped<IRepository, Repository>();
             services.AddSession();
             services.AddMemoryCache();
@@ -61,7 +60,7 @@ namespace Api.WebApi
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=CustomerServices}/{action=GetLocations}/{id?}");
+                    template: "{controller=CustomerServices}/{action=GetEstimate}/{id?}");
             });
         }
     }

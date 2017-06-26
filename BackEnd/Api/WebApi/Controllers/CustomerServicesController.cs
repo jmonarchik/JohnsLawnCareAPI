@@ -24,57 +24,34 @@ namespace Api.WebApi.Controllers
             return "Look Ma, my first pizza service!";
         }
 
-        //GetLocations
+        //GetEstimates
         [HttpGet]
-        [Route("locations")]
-        public List<DTO.Location> GetLocations()
+        [Route("estimates")]
+        public List<DTO.Estimate> GetEstimates()
         {
-            return _customerServices.GetLocations();
-        }
-        
-        //GetLocation
-        [HttpGet]
-        [Route("location/{locationId}")]
-        public DTO.Location GetLocation(int locationId)
-        {
-            return _customerServices.GetLocation(locationId);
+            return _customerServices.GetEstimate();
         }
 
-        //GetOrders
+        //GetEstimate
         [HttpGet]
-        [Route("orders")]
-        public IEnumerable<DTO.Order> GetOrders()
+        [Route("estimate/{estimateId}")]
+        public DTO.Estimate GetEstimate(int estimateId)
         {
-            return _customerServices.GetOrders();
+            return _customerServices.GetEstimate(estimateId);
         }
 
-        //CreateOrder
+
+        // See original code from pizza if error here.
+        //CreateEstimate
         [HttpPost]
-        [Route("order/{newOrder}")]
-        public DTO.Order CreateOrder(DTO.Order newOrder)
+        [Route("estimate/{newEstimate}")]
+        public DTO.Estimate CreateEstimate(DTO.Estimate newEstimate)
         {
-            var order = _customerServices.CreateOrder(newOrder);
-            var order2 = _customerServices.GetOrder(order.OrderId);
+            var estimate = _customerServices.CreateEstimate(newEstimate);
+            var estimate2 = _customerServices.CreateEstimate(estimate);
 
-            return order2;
+            return estimate2;
         }
 
-        //GetOrder
-        [HttpGet]
-        [Route("order/{orderId}")]
-        public DTO.Order GetOrder(int orderId)
-        {
-            var order = _customerServices.GetOrder(orderId);
-
-            return order;
-        }
-
-        //GetToppings
-        [HttpGet]
-        [Route("toppings")]
-        public List<DTO.Topping> GetToppings()
-        {
-            return _customerServices.GetToppings();
-        }
     }
 }
