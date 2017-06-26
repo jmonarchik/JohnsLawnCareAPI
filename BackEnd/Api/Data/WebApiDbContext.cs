@@ -10,7 +10,7 @@ namespace Api.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite("Data Source=C:\\Users\\MrHydeOut\\Source\\Repos\\MariosPizzerias-SPA\\BackEnd\\Api\\DataBase\\marios_pizzerias.db");
+            optionsBuilder.UseSqlite("Data Source=C:\\Users\\John Monarchik\\Desktop\\Projects\\JMLawnServicesAPI\\src\\Database\\JMLawnServices.db");
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
