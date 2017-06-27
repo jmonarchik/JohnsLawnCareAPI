@@ -8,6 +8,7 @@ namespace Api.Data
         {
             context.Database.Migrate();
             context.Database.EnsureCreated();
+
         }
     }
 }

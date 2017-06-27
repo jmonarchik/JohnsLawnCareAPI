@@ -19,7 +19,7 @@ namespace Api.WebApi.Models
         public int RequestsMow { get; set; }
         public int RequestsBlow { get; set; }
         public int RequestsEdge { get; set; }
-        public int Cost { get; set; }
+        public decimal Cost { get; set; }
         public int AreaInSquareFeet { get; set; }
     }
 }

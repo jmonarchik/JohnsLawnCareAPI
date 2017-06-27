@@ -10,16 +10,5 @@ namespace Api.Data.Repositories
         Estimate GetEstimate(int estimateId);
         Estimate CreateEstimate(Estimate newEstimate);
 
-        //  Location UpdateLocation(Location updatedLocation);
-
-
-        // Order CreateOrder(Order newOrder);
-        // IEnumerable<Order> GetOrders();
-        // Order GetOrder(int orderId);
-
-
-        // List<Topping> GetToppings();
-        // Topping GetTopping(int toppingId);
-        // Topping UpdateTopping(Topping updatedTopping);
     }
 }

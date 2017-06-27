@@ -50,28 +50,5 @@ namespace Api.Services
 
             return dto;
         }
-
-        // public DTO.Order GetOrder(int orderId)
-        // {
-        //     var order = _repository.GetOrder(orderId);
-        //     var dto = DTO.Order.fromDAO(order);
-
-        //     return dto;
-        // }
-
-        // public List<DTO.Topping> GetToppings()
-        // {
-        //     List<DTO.Topping> toppingDTOs = new List<DTO.Topping>();
-
-        //     var toppingDAOs = _repository.GetToppings();
-
-        //     foreach (var topping in toppingDAOs)
-        //     {
-        //         var dto = DTO.Topping.fromDAO(topping);
-        //         toppingDTOs.Add(dto);
-        //     }
-
-        //     return toppingDTOs;
-        // }
     }
 }
