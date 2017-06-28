@@ -41,15 +41,14 @@ namespace Api.WebApi.Controllers
         }
 
 
-        // See original code from pizza if error here.
-        //Change to match model
+
         //CreateEstimate
         [HttpPost]
         [Route("estimate/{newEstimate}")]
         public DTO.Estimate CreateEstimate(DTO.Estimate newEstimate)
         {
             var estimate = _customerServices.CreateEstimate(newEstimate);
-            var estimate2 = _customerServices.CreateEstimate(estimate);
+            var estimate2 = _customerServices.GetEstimate(estimate.ID);
 
             return estimate2;
         }

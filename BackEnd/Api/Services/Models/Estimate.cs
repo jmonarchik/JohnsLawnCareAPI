@@ -13,7 +13,7 @@ namespace Api.Services.Models
         public string StreetAddress { get; set; }
         public string City { get; set; }
         public int ZipCode { get; set; }
-        public int PhoneNumber { get; set; }
+        public string PhoneNumber { get; set; }
         public string Email { get; set; }
         public int RequestsMow { get; set; }
         public int RequestsBlow { get; set; }
@@ -25,6 +25,7 @@ namespace Api.Services.Models
         public static DAO.Estimate toDAO(Estimate dto)
         {
             var dao = new DAO.Estimate();
+            dao.ID = dto.ID;
             dao.FirstName = dto.FirstName;
             dao.LastName = dto.LastName;
             dao.StreetAddress = dto.StreetAddress;
@@ -36,6 +37,7 @@ namespace Api.Services.Models
             dao.RequestsBlow = dto.RequestsBlow;
             dao.RequestsEdge = dto.RequestsEdge;
             dao.Cost = dto.Cost;
+            dao.AreaInSquareFeet = dto.AreaInSquareFeet;
 
             return dao;
         }
@@ -44,6 +46,7 @@ namespace Api.Services.Models
         public static Estimate fromDAO(DAO.Estimate dao)
         {
             var dto = new Estimate();
+            dto.ID = dao.ID;
             dto.FirstName = dao.FirstName;
             dto.LastName = dao.LastName;
             dto.StreetAddress = dao.StreetAddress;
@@ -55,6 +58,7 @@ namespace Api.Services.Models
             dto.RequestsBlow = dao.RequestsBlow;
             dto.RequestsEdge = dao.RequestsEdge;
             dto.Cost = dao.Cost;
+            dto.AreaInSquareFeet = dao.AreaInSquareFeet;
 
             return dto;
 

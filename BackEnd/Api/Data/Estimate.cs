@@ -12,7 +12,7 @@ namespace Api.Data
         public string StreetAddress { get; set; }
         public string City { get; set; }
         public int ZipCode { get; set; }
-        public int PhoneNumber { get; set; }
+        public string PhoneNumber { get; set; }
         public string Email { get; set; }
         public int RequestsMow { get; set; }
         public int RequestsBlow { get; set; }
