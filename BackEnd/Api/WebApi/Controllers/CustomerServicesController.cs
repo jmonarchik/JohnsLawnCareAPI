@@ -44,8 +44,8 @@ namespace Api.WebApi.Controllers
 
         //CreateEstimate
         [HttpPost]
-        [Route("estimate/{newEstimate}")]
-        public DTO.Estimate CreateEstimate(DTO.Estimate newEstimate)
+        [Route("estimate")]
+        public DTO.Estimate CreateEstimate([FromBody] DTO.Estimate newEstimate)
         {
             var estimate = _customerServices.CreateEstimate(newEstimate);
             var estimate2 = _customerServices.GetEstimate(estimate.ID);
